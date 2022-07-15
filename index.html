@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="container text-center p-4">
+      <h1 class="h1 fw-bolder display-6">
+        Ferramenta administrativa de notícias
+      </h1>
+    </header>
+    <main class="container px-4 px-lg-0">
+      <section class="mb-5">
+        <h2 class="h2 fw-semibold">Seleção de imagens</h2>
+        <p class="fw-normal">Selecione cada imagem que será utilizada</p>
+        <div class="row mb-4">
+          <div class="col mb-3 mb-md-0">
+            <input class="form-control" type="file" id="imageFileInput" />
+          </div>
+          <div class="col-md-5">
+            <input
+              type="text"
+              class="form-control"
+              id="imageNameInput"
+              placeholder="Nome da Imagem"
+            />
+          </div>
+        </div>
+        <p class="fw-normal">Imagens a enviar.</p>
+        <div
+          class="card card-body d-block d-lg-flex flex-row gap-3 mb-3"
+          id="imagesBox"
+          style="min-height: 10rem"
+        ></div>
+        <button type="submit" class="btn btn-primary" id="uploadButton">
+          Enviar Imagem
+        </button>
+        <div id="imagesLinks"></div>
+      </section>
+      <section>
+        <h2 class="h2 fw-semibold">Criação da notícia</h2>
+        <p class="fw-normal">
+          Inserir título da notícia, nome de uma das imagens enviadas para a imagem principal da notícia e o texto da notícia
+        </p>
+        <div class="row mb-3">
+          <div class="col mb-3 mb-md-0">
+            <div class="form-floating">
+              <input
+                type="text"
+                class="form-control"
+                id="newsTitle"
+                placeholder="Título da Notícia"
+              />
+              <label for="newsTitle" class="text-muted">Título da Notícia</label>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="form-floating">
+              <input
+                type="text"
+                class="form-control"
+                id="cardImageLink"
+                placeholder="Link da Imagem Principal"
+              />
+              <label for="cardImageLink" class="text-muted">Nome da Imagem Principal</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-floating mb-3">
+          <textarea
+            class="form-control"
+            placeholder="Leave a comment here"
+            id="newsText"
+            style="height: 30rem"
+          ></textarea>
+          <label for="newsText" class="text-muted">Texto da Notícia</label>
+        </div>
+        <button type="submit" class="btn btn-primary" id="uploadNewsButton">
+          Enviar Notícia
+        </button>
+      </section>
+    </main>
+    <footer class="container text-center pt-5">
+      <p class="fw-normal text-muted mb-1">Copyright</p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
